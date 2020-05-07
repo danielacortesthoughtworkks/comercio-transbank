@@ -1,0 +1,57 @@
+{
+    "port": 4545,
+    "protocol": "http",
+    "stubs": [
+      {
+        "predicates": [
+          {
+            "equals": {
+              "method": "POST",
+              "path": "/newtransaction"
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE"
+      },
+              "body": ""
+            }
+          }
+        ]
+      },
+      {
+        "predicates": [
+          {
+            "equals": {
+              "method": "POST",
+              "path": "/result"
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE"
+      },
+              "body": ""
+            }
+          }
+        ]
+      },
+      {
+        "responses": [
+          {
+            "is": { "statusCode": 404 }
+          }
+        ]
+      }
+    ]
+  }

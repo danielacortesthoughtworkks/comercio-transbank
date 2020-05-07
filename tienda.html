@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="realizarPago()">Pagar</button>
+    <script>
+        (function (o, n, e, p, a, y) {
+            var s = n.createElement(p);
+            s.type = "text/javascript";
+            s.src = e;
+            s.onload = s.onreadystatechange = function () {
+                if (!o && (!s.readyState
+                    || s.readyState === "loaded")) {
+                    y();
+                }
+            };
+            var t = n.getElementsByTagName("script")[0];
+            p = t.parentNode;
+            p.insertBefore(s, t);
+        })(false, document, "https://unpkg.com/transbank-onepay-frontend-sdk@1/lib/merchant.onepay.min.js",
+            "script",window, function () {
+                console.log("Onepay JS library successfully loaded.");
+            });
+    </script>
+    <script src="index.js">
+     </script>
+</body>
+</html>
